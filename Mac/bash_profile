@@ -1,0 +1,12 @@
+# This file will be excute first when I login
+# Then it will to run .bashrc
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+    . "$HOME/.bashrc"
+    fi
+fi
+
+
