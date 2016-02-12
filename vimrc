@@ -1,4 +1,5 @@
-"--------------------------------------------------------- Vundle
+"-------------------------------------------------------- Vundle
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -6,24 +7,45 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
 Plugin 'aperezdc/vim-template'
-Plugin 'Valloric/YouCompleteMe'
+
+"Plugin 'Valloric/YouCompleteMe'
+
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-"--------------------------------------------------------- Vundle
+"-------------------------------------------------------- Vundle setting
+
+" YouCompleteMe, C-family Semantic Completion Engine 
+"let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+"let g:ycm_confirm_extra_conf = 0
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+"let g:UltiSnipsExpandTrigger="<c-]>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+"-------------------------------------------------------- Other setting
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
 if has("syntax")
   syntax on
-  "syntax off
 endif
 
 " If using a dark background within the editing area and syntax highlighting
@@ -94,7 +116,7 @@ set fileencoding=utf-8
 " set highlight search
 set hlsearch
 
-" set mode
+" set show mode
 set showmode
 
 " Automatically save before commands like :next and :make
@@ -103,7 +125,7 @@ set autowrite
 " Show (partial) command in status line.
 set showcmd		
 
-"---------------------------------------------------  key mapping
+"-------------------------------------------------------- Key mapping
 " disable arrow key to make myself to use hjkl
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
@@ -139,6 +161,4 @@ nnoremap <F3> :noh<CR>
 
 " replace all tab to space
 ":retab
-
-
 

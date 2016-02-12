@@ -1,9 +1,12 @@
-wget mrgee.me/dl/rc.tar
-tar xvf rc.tar
-mv -f rc/vimrc .vimrc
-mv -f rc/tmux.conf .tmux.conf
+## -------------------------------------------- set bashrc
+#cat bashrc >> ~/.bashrc
 
-rm -rfd rc*
+#wget mrgee.me/dl/rc.tar
+#tar xvf rc.tar
+#mv -f rc/vimrc .vimrc
+#mv -f rc/tmux.conf .tmux.conf
+#
+#rm -rfd rc*
 
 sudo apt-get update -y
 sudo apt-get upgrade -y

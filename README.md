@@ -3,11 +3,18 @@
 Include bashrc, vimrc, sqliterc, tmux.comf
 
 ## VIM Note
-* turn off highlighting  
+* **turn off highlighting**  
 `:noh`
-* replace  
+* **replace**  
 `range``s``/``string(source)``/``string(destination)``/``control`  
 `%s/ABC/abc/c`
+* **Install Plugin**  
+`vim +PluginInstall +qall`  
+or  
+`:PluginInstall`
+* **Compile YouCompleteMe**  
+`sudo apt-get install build-essential cmake`  
+`sudo apt-get install python-dev`
 
 
 ## Reference
