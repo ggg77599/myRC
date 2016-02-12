@@ -1,3 +1,23 @@
+"--------------------------------------------------------- Vundle
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'aperezdc/vim-template'
+Plugin 'Valloric/YouCompleteMe'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+"--------------------------------------------------------- Vundle
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
@@ -103,11 +123,11 @@ cnoremap sudow w !sudo tee % > /dev/null
 " turn off highlighting
 nnoremap <F3> :noh<CR>
 
-inoremap ( ()<Esc>i
-inoremap " ""<Esc>i
-inoremap ' ''<Esc>i
-inoremap [ []<Esc>i
-inoremap {<CR> {<CR>}<Esc>ko
+"inoremap ( ()<Esc>i
+"inoremap " ""<Esc>i
+"inoremap ' ''<Esc>i
+"inoremap [ []<Esc>i
+"inoremap {<CR> {<CR>}<Esc>ko
 
 "--------------------------------------------------
 
