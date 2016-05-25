@@ -15,7 +15,7 @@ Plugin 'aperezdc/vim-template'
 
 "Plugin 'Valloric/YouCompleteMe'
 
-" Track the engine.
+" vim must enable python
 Plugin 'SirVer/ultisnips'
 
 " Snippets are separated from the engine. Add this if you want them:
@@ -28,6 +28,8 @@ Plugin 'Yggdroot/indentLine'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+"let g:UltiSnipsUsePythonVersion = 2
+
 "-------------------------------------------------------- Vundle setting
 
 " YouCompleteMe, C-family Semantic Completion Engine 
@@ -35,13 +37,19 @@ filetype plugin indent on    " required
 "let g:ycm_confirm_extra_conf = 0
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-"let g:UltiSnipsExpandTrigger="<c-]>"
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<c-]>"
+"let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" Disable tern scratch preview
+set completeopt-=preview
+
+" indent setting
+"let g:indentLine_char = '|'
 
 "-------------------------------------------------------- Other setting
 
@@ -128,6 +136,8 @@ set autowrite
 " Show (partial) command in status line.
 set showcmd		
 
+set cmdheight=2
+
 "-------------------------------------------------------- Key mapping
 " disable arrow key to make myself to use hjkl
 inoremap  <Up>     <NOP>
@@ -147,6 +157,9 @@ cnoremap sudow w !sudo tee % > /dev/null
 
 " turn off highlighting
 nnoremap <F3> :noh<CR>
+
+" show file encoding
+cnoremap fe set fileencoding
 
 "inoremap ( ()<Esc>i
 "inoremap " ""<Esc>i

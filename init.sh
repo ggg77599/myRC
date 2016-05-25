@@ -13,6 +13,8 @@ sudo apt-get upgrade -y
 
 sudo apt-get dist-upgrade -y
 
+sudo apt-get install build-essential -y
+
 sudo apt-get install python-dev -y
 sudo apt-get install python-pip -y
 
