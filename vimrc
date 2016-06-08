@@ -138,6 +138,9 @@ set showcmd
 
 set cmdheight=2
 
+" make backspace work
+set backspace=indent,eol,start
+
 "-------------------------------------------------------- Key mapping
 " disable arrow key to make myself to use hjkl
 inoremap  <Up>     <NOP>

@@ -11,3 +11,4 @@ vim +PluginInstall +qall
 # copy C-family Semantic Completion Engine
 #wget https://raw.githubusercontent.com/Valloric/ycmd/master/cpp/ycm/.ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
 
+# build vim should install libncurses5-dev

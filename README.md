@@ -15,6 +15,7 @@ or
 * **Compile YouCompleteMe**  
 `sudo apt-get install build-essential cmake`  
 `sudo apt-get install python-dev`
+`git submodule update --init --recursive`
 `cd ~/.vim/bundle/YouCompleteMe`  
 `./install.py --clang-completer`
 
