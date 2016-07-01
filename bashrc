@@ -24,7 +24,7 @@ GIT_PS1_SHOWCOLORHINTS="yes"
 # Bold High Intensity 90=Black, 91=Red, 92=Green, 93=Yellow, 94=Blue, 95=Purple, 96=Cyan, 97=White
 # 0=Regular, 1=Bold, 4=Underline
 # reference : https://wiki.archlinux.org/index.php/Color_Bash_Prompt
-export PS1="\[\033[35m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[m\]:\[\033[1;33m\]\w\[\033[34m\]\$(__git_ps1 )\[\033[m\]\$ "
+export PS1="\[\033[35m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[m\]:\[\033[1;33m\]\w \[\033[34m\]\$(__git_ps1 '(%s)')\[\033[m\]\$ "
 
 
 
