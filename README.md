@@ -25,6 +25,7 @@ or
 <https://github.com/aperezdc/vim-template>
 <https://github.com/Valloric/YouCompleteMe>
 
-
-
 <http://vim-scripts.org/index.html>
+
+<http://softsmith.blogspot.tw/2008/12/vim-tab.html>
+<http://softsmith.blogspot.tw/2013/03/vim-tab.html>
