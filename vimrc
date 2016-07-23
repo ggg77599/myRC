@@ -167,6 +167,9 @@ nnoremap <F3> :noh<CR>
 " show file encoding
 cnoremap fe set fileencoding
 
+" enable tagbar
+nmap <F8> :TagbarToggle<CR>
+
 "inoremap ( ()<Esc>i
 "inoremap " ""<Esc>i
 "inoremap ' ''<Esc>i

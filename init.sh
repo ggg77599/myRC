@@ -27,6 +27,7 @@ sudo apt-get install tmux -y
 
 sudo apt-get install nmap -y
 
+sudo apt-get install exuberant-ctags -y
 
 sudo pip install requests
 sudo pip install virtualenv
