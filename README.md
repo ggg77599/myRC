@@ -19,6 +19,8 @@ or
 `cd ~/.vim/bundle/YouCompleteMe`  
 `./install.py --clang-completer`
 
+* Setting snippet
+`vim .vim/bundle/vim-snippets/snippets/`
 
 ## Reference
 <https://github.com/VundleVim/Vundle.vim>
