@@ -1,5 +1,6 @@
 "-------------------------------------------------------- Vundle
 
+set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -13,7 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'aperezdc/vim-template'
 
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 " vim must enable python
 Plugin 'SirVer/ultisnips'
@@ -27,17 +28,31 @@ Plugin 'Yggdroot/indentLine'
 " tagbar
 Plugin 'majutsushi/tagbar'
 
+" cool line in bottom
+Plugin 'vim-airline/vim-airline'
+
+" move cursor easier
+Plugin 'easymotion/vim-easymotion'
+
+" the vim file manager
+Plugin 'scrooloose/nerdtree'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-"let g:UltiSnipsUsePythonVersion = 2
 
 "-------------------------------------------------------- Vundle setting
 
 " YouCompleteMe, C-family Semantic Completion Engine 
 "let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 "let g:ycm_confirm_extra_conf = 0
+
+" show function preview
+let g:ycm_add_preview_to_completeopt = 1
+
+" close function preview when complete
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-]>"
@@ -48,11 +63,11 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
-" Disable tern scratch preview
-set completeopt-=preview
-
 " indent setting
 "let g:indentLine_char = '|'
+
+" set tagbar sort by code's order
+let g:tagbar_sort = 0
 
 "-------------------------------------------------------- Other setting
 
@@ -99,6 +114,9 @@ set expandtab
 " when I edit makefile, vim will not use space to replace tab
 autocmd FileType make setlocal noexpandtab
 
+" set python file indent = 2
+autocmd FileType python setlocal ts=2 sw=2 sts=2
+
 " always keep at least 7 lines visible 
 set scrolloff=20
 
@@ -139,7 +157,7 @@ set autowrite
 " Show (partial) command in status line.
 set showcmd		
 
-set cmdheight=2
+"set cmdheight=2
 
 " make backspace work
 set backspace=indent,eol,start
@@ -172,6 +190,9 @@ cnoremap fe set fileencoding
 
 " enable tagbar
 nmap <F8> :TagbarToggle<CR>
+
+" enable nerdtree
+map <C-n> :NERDTreeToggle<CR>
 
 "inoremap ( ()<Esc>i
 "inoremap " ""<Esc>i
