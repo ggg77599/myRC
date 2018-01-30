@@ -4,6 +4,7 @@ alias ls='ls -GFh --color'
 alias ll='ls -al'
 alias la='ls -a'
 alias l='la'
+alias rm='rm -i'
 
 alias grep='grep --color=auto'
 
@@ -13,6 +14,7 @@ color_prompt=yes
 source ~/.git-completion.bash
 source ~/.git-prompt.sh
 
+# set git prompt
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWCOLORHINTS="yes"
@@ -25,6 +27,12 @@ GIT_PS1_SHOWCOLORHINTS="yes"
 # 0=Regular, 1=Bold, 4=Underline
 # reference : https://wiki.archlinux.org/index.php/Color_Bash_Prompt
 export PS1="\[\033[35m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[m\]:\[\033[1;33m\]\w \[\033[34m\]\$(__git_ps1 '(%s)')\[\033[m\]\$ "
+
+
+# Shift-Tab auto complete
+set show-all-if-ambiguous on
+bind '"\e[Z":menu-complete' 
+
 
 
 

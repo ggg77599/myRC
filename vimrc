@@ -115,7 +115,10 @@ set expandtab
 autocmd FileType make setlocal noexpandtab
 
 " set python file indent = 2
-autocmd FileType python setlocal ts=2 sw=2 sts=2
+"autocmd FileType python setlocal ts=2 sw=2 sts=2
+
+" auto open tagbar
+"autocmd FileType * nested :call tagbar#autoopen(0)
 
 " always keep at least 7 lines visible 
 set scrolloff=20
@@ -164,6 +167,12 @@ set backspace=indent,eol,start
 
 " no nodeline
 set nomodeline
+
+" set line mark to show maximal characters can use
+set colorcolumn=80
+
+" set  line mark color
+highlight ColorColumn ctermbg=235
 
 "-------------------------------------------------------- Key mapping
 " disable arrow key to make myself to use hjkl
