@@ -31,3 +31,6 @@ or
 
 <http://softsmith.blogspot.tw/2008/12/vim-tab.html>
 <http://softsmith.blogspot.tw/2013/03/vim-tab.html>
+
+## tmux reference
+<https://github.com/gpakosz/.tmux>

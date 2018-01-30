@@ -1,12 +1,15 @@
+# fix locale 
+export LC_ALL="en_US.UTF-8"
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+
 # install required packages
+sudo apt-get update
+sudo apt-get install vim -y
+sudo apt-get install git -y
 sudo apt-get install python-dev -y
 sudo apt-get install python-pip -y
 sudo apt-get install cmake -y
 sudo apt-get install exuberant-ctags -y
-
-# fix python locale 
-export LC_ALL="en_US.UTF-8"
-sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 
 # copy vimrc to ~/.vimrc
 cp vimrc ~/.vimrc
