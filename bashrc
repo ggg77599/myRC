@@ -1,11 +1,12 @@
 
 # add alais
-alias ls='ls -GFh --color'
+alias ls='ls -Fh --color'
 alias ll='ls -al'
 alias la='ls -a'
 alias l='la'
 alias rm='rm -i'
 
+alias vimdiff='vimdiff -u ~/.vimdiffrc'
 alias grep='grep --color=auto'
 
 color_prompt=yes
