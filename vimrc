@@ -37,6 +37,9 @@ Plugin 'easymotion/vim-easymotion'
 " the vim file manager
 Plugin 'scrooloose/nerdtree'
 
+" improve search
+Plugin 'google/vim-searchindex'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -84,7 +87,7 @@ set background=dark
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
 
 " Uncomment the following to have Vim load indentation rules and plugins
@@ -118,7 +121,7 @@ autocmd FileType make setlocal noexpandtab
 "autocmd FileType python setlocal ts=2 sw=2 sts=2
 
 " auto open tagbar
-autocmd FileType * nested :call tagbar#autoopen(0)
+"autocmd FileType * nested :call tagbar#autoopen(0)
 
 " auto open NERDTree
 "autocmd vimenter * NERDTree

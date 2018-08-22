@@ -13,7 +13,6 @@ sudo apt-get install exuberant-ctags -y
 
 # copy vimrc to ~/.vimrc
 cp vimrc ~/.vimrc
-cp vimdiffrc ~/.vimdiffrc
 
 # install vim vundle
 mkdir -p ~/.vim/bundle

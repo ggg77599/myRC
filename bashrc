@@ -8,6 +8,7 @@ alias rm='rm -i'
 
 alias vimdiff='vimdiff -u ~/.vimdiffrc'
 alias grep='grep --color=auto'
+alias wnv='watch -n 1 nvidia-smi'
 
 color_prompt=yes
 
@@ -29,6 +30,7 @@ GIT_PS1_SHOWCOLORHINTS="yes"
 # reference : https://wiki.archlinux.org/index.php/Color_Bash_Prompt
 export PS1="\[\033[35m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[m\]:\[\033[1;33m\]\w \[\033[34m\]\$(__git_ps1 '(%s)')\[\033[m\]\$ "
 
+export TERM="xterm-256color"
 
 # Shift-Tab auto complete
 set show-all-if-ambiguous on

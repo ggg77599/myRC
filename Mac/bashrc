@@ -24,7 +24,7 @@ esac
 
 # add alais
 unalias -a
-alias ls='ls -Fh'
+alias ls='ls -GFh'
 alias ll='ls -al'
 alias la='ls -a'
 alias l='la'
