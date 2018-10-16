@@ -3,3 +3,5 @@
 	email = ggg77599@gmail.com
 [alias]
 	adog = log --all --decorate --oneline --graph
+[http]
+	sslVerify = false

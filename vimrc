@@ -204,7 +204,7 @@ cnoremap sudow w !sudo tee % > /dev/null
 nnoremap <F3> :noh<CR>
 
 " show file encoding
-cnoremap fe set fileencoding
+"cnoremap fe set fileencoding
 
 " enable tagbar
 nmap <F8> :TagbarToggle<CR>
