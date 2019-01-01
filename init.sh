@@ -1,7 +1,5 @@
 ## -------------------------------------------- set bashrc
 cat bashrc >> ~/.bashrc
-wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash 
-wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh       -O ~/.git-prompt.sh
 
 # fix locale 
 export LC_ALL="en_US.UTF-8"
@@ -32,14 +30,23 @@ sudo apt-get install tmux -y
 #sudo -H pip install grip
 #sudo -H pip install requests
 
-## -------------------------------------------- set pip
+## -------------------------------------------- install git lfs
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install git-lfs
+git lfs install
 
+## -------------------------------------------- setup git config
+version=`git --version | awk '{print $3}'`
+wget "https://raw.githubusercontent.com/git/git/v"$version"/contrib/completion/git-completion.bash" -O ~/.git-completion.bash 
+wget "https://raw.githubusercontent.com/git/git/v"$version"/contrib/completion/git-prompt.sh"       -O ~/.git-prompt.sh
+
+cp gitconfig ~/.gitconfig
+
+## -------------------------------------------- setup pip config
 mkdir -p ~/.pip/
 cp pip.conf ~/.pip/
 
-## -------------------------------------------- set tmux
+## -------------------------------------------- setup tmux config
+cp tmux.conf ~/.tmux.conf
 
-
-## -------------------------------------------- set git config
-cp gitconfig ~/.gitconfig
 
