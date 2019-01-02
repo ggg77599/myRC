@@ -40,6 +40,9 @@ Plugin 'scrooloose/nerdtree'
 " improve search
 Plugin 'google/vim-searchindex'
 
+"Plugin 'townk/vim-autoclose'
+Plugin 'jiangmiao/auto-pairs'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -87,8 +90,9 @@ set background=dark
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+  au BufReadPost * if line("'\"") >= 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
+
 
 " Uncomment the following to have Vim load indentation rules and plugins
 " according to the detected filetype.
@@ -117,11 +121,15 @@ set expandtab
 " when I edit makefile, vim will not use space to replace tab
 autocmd FileType make setlocal noexpandtab
 
+augroup filetypedetect
+    au BufRead,BufNewFile *.cl set filetype=c
+augroup END
+
 " set python file indent = 2
 "autocmd FileType python setlocal ts=2 sw=2 sts=2
 
 " auto open tagbar
-"autocmd FileType * nested :call tagbar#autoopen(0)
+"autocmd VimEnter * nested :call tagbar#autoopen(1)
 
 " auto open NERDTree
 "autocmd vimenter * NERDTree
@@ -182,6 +190,12 @@ highlight ColorColumn ctermbg=235
 
 "highlight Visual term=reverse ctermbg=DarkGrey
 highlight Visual ctermbg=DarkGrey
+
+" save the folding state
+"au BufWinLeave * mkview
+"au BufWinEnter * silent loadview
+
+set viminfo='100,<1000,s100,h
 
 "-------------------------------------------------------- Key mapping
 " disable arrow key to make myself to use hjkl

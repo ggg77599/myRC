@@ -1,7 +1,16 @@
 [user]
-	name = ggg77599
-	email = ggg77599@gmail.com
+    name = ggg77599
+    email = ggg77599@gmail.com
+    name = MrG
 [alias]
-	adog = log --all --decorate --oneline --graph
+    adog = log --all --decorate --oneline --graph
 [http]
-	sslVerify = false
+    sslVerify = false
+[filter "lfs"]
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+[credential]
+    helper = cache --timeout=3600
+
