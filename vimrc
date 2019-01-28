@@ -41,7 +41,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'google/vim-searchindex'
 
 "Plugin 'townk/vim-autoclose'
-Plugin 'jiangmiao/auto-pairs'
+"Plugin 'jiangmiao/auto-pairs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -125,6 +125,9 @@ augroup filetypedetect
     au BufRead,BufNewFile *.cl set filetype=c
 augroup END
 
+" set enable 256 color
+set t_Co=256 
+
 " set python file indent = 2
 "autocmd FileType python setlocal ts=2 sw=2 sts=2
 
@@ -134,11 +137,12 @@ augroup END
 " auto open NERDTree
 "autocmd vimenter * NERDTree
 
-" always keep at least 7 lines visible 
+" always keep at least 7 lines visible
 set scrolloff=20
 
 " show current line
 set cursorline
+hi CursorLine term=bold cterm=bold ctermbg=235
 
 " show status in bottom right
 set ruler
@@ -152,9 +156,6 @@ set smartcase
 
 " Incremental search
 set incsearch
-
-" set enable 256 color
-set t_Co=256 
 
 " set line number color
 highlight LineNr ctermfg=DarkGrey
@@ -196,6 +197,8 @@ highlight Visual ctermbg=DarkGrey
 "au BufWinEnter * silent loadview
 
 set viminfo='100,<1000,s100,h
+
+set splitright
 
 "-------------------------------------------------------- Key mapping
 " disable arrow key to make myself to use hjkl
