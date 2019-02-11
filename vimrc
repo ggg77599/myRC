@@ -40,9 +40,6 @@ Plugin 'scrooloose/nerdtree'
 " improve search
 Plugin 'google/vim-searchindex'
 
-"Plugin 'townk/vim-autoclose'
-"Plugin 'jiangmiao/auto-pairs'
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -180,9 +177,6 @@ set showcmd
 " make backspace work
 set backspace=indent,eol,start
 
-" no nodeline
-set nomodeline
-
 " set line mark to show maximal characters can use
 set colorcolumn=80
 
@@ -196,8 +190,10 @@ highlight Visual ctermbg=DarkGrey
 "au BufWinLeave * mkview
 "au BufWinEnter * silent loadview
 
+" copy max line
 set viminfo='100,<1000,s100,h
 
+" open new split plane on right
 set splitright
 
 "-------------------------------------------------------- Key mapping
@@ -219,9 +215,6 @@ cnoremap sudow w !sudo tee % > /dev/null
 
 " turn off highlighting
 nnoremap <F3> :noh<CR>
-
-" show file encoding
-"cnoremap fe set fileencoding
 
 " enable tagbar
 nmap <F8> :TagbarToggle<CR>
