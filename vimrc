@@ -57,6 +57,9 @@ let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 
+" max number of complete menu
+let g:ycm_max_num_candidates = 100
+
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-]>"
 "let g:UltiSnipsExpandTrigger="<tab>"
@@ -218,6 +221,8 @@ nnoremap <F3> :noh<CR>
 
 " enable tagbar
 nmap <F8> :TagbarToggle<CR>
+
+nmap <F7> :IndentLinesToggle<CR>
 
 " enable nerdtree
 map <C-n> :NERDTreeToggle<CR>
