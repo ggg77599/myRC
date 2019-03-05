@@ -14,6 +14,10 @@ sudo apt-get install exuberant-ctags -y
 # copy vimrc to ~/.vimrc
 cp vimrc ~/.vimrc
 
+if [ -d ~/.vim/bundle ]; then
+  exit 0
+fi
+
 # install vim vundle
 mkdir -p ~/.vim/bundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim

@@ -4,6 +4,7 @@
 [alias]
     adog = log --all --decorate --oneline --graph
     tls = ls-tree -r master --name-only
+    s = status
 [http]
     sslVerify = false
 [filter "lfs"]
@@ -13,4 +14,5 @@
     required = true
 [credential]
     helper = cache --timeout=3600
-
+[core]
+    quotepath = off
