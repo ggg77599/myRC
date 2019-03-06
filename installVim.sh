@@ -1,33 +1,43 @@
-# fix locale 
-export LC_ALL="en_US.UTF-8"
-sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 
-# install required packages
-sudo apt-get update
-sudo apt-get install vim -y
-sudo apt-get install git -y
-sudo apt-get install python-dev -y
-sudo apt-get install python-pip -y
-sudo apt-get install cmake -y
-sudo apt-get install exuberant-ctags -y
+
+if [ -d ~/.vim/bundle ]; then
+    echo ~/.vim/bundle exist !
+
+    vim +PluginInstall +qall
+    echo update DONE
+
+    exit 0
+
+fi
 
 # copy vimrc to ~/.vimrc
 cp vimrc ~/.vimrc
-
-if [ -d ~/.vim/bundle ]; then
-  exit 0
-fi
 
 # install vim vundle
 mkdir -p ~/.vim/bundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+if [ $1 = "ycm" ];
+then
+
+    echo install YCM
+
+    sed -i -e 's/\"Plugin/Plugin/g' ~/.vimrc
+
+    # copy C-family Semantic Completion Engine
+    wget https://raw.githubusercontent.com/Valloric/ycmd/master/cpp/ycm/.ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
+    
+fi
+
 # install vim plugin
 vim +PluginInstall +qall
+echo Install DONE
 
-# copy C-family Semantic Completion Engine
-wget https://raw.githubusercontent.com/Valloric/ycmd/master/cpp/ycm/.ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
+if [ $1 = "ycm" ];
+then
+    # compile YCM
+    cd ~/.vim/bundle/YouCompleteMe
+    ./install.py
+fi
 
-# compile YCM
-cd ~/.vim/bundle/YouCompleteMe
-./install.py
+
