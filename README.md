@@ -2,6 +2,15 @@
 
 Include bashrc, vimrc, sqliterc, tmux.comf
 
+## Install
+* install basic config
+`sh install.sh`
+* install vim plugin
+`sh installVim.sh`
+* install vim plugin with ycm
+`sh installVim.sh ycm`
+
+
 ## VIM Note
 * **turn off highlighting**  
 `:noh`
@@ -12,6 +21,10 @@ Include bashrc, vimrc, sqliterc, tmux.comf
 `vim +PluginInstall +qall`  
 or  
 `:PluginInstall`
+* **Update Plugin**  
+`vim +PluginUpdate +qall`  
+or  
+`:PluginUpdate`
 * **Compile YouCompleteMe**  
 `sudo apt-get install build-essential cmake`  
 `sudo apt-get install python-dev`

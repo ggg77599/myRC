@@ -1,6 +1,5 @@
 
 mac install.sh
 
-installVim.sh
-
+PS1 color 配色
 

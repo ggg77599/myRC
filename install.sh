@@ -4,10 +4,10 @@ myRC_HOME=`pwd`
 
 
 ## setup bashrc
-if grep -q ". .bashrc.mrg" ~/.bashrc; then
+if grep -q ". ~/.bashrc.mrg" ~/.bashrc; then
   echo update myRC
 else
-  echo ". .bashrc.mrg" >> ~/.bashrc
+  echo ". ~/.bashrc.mrg" >> ~/.bashrc
   echo installing myRC 
 fi
 
