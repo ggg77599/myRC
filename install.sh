@@ -77,7 +77,7 @@ mkdir -p ~/.pip/
 cp pip.conf ~/.pip/
 
 # install pip packages
-#sudo -H pip3 install virtualenv
+sudo -H pip3 install virtualenv
 #sudo -H pip3 install grip
 
 
