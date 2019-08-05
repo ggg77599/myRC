@@ -33,6 +33,7 @@ sudo apt-get install python3-distutils -y
 sudo apt-get install ssh -y
 sudo apt-get install git -y
 sudo apt-get install tmux -y
+sudo apt-get install nfs-common -y
 
 # vimrc essential
 sudo apt-get install cmake -y
@@ -66,6 +67,7 @@ cp tmux.conf ~/.tmux.conf
 # install pip for python 3
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 sudo -H python3 get-pip.py
+rm -f get-pip.py
 
 # python symbolic link
 cd /usr/bin/
