@@ -6,7 +6,7 @@ alias ll='ls -al'
 alias la='ls -a'
 alias l='la'
 alias rm='rm -i'
-
+alias diff='colordiff'
 alias grep='grep --color=auto'
 alias wnv='watch -n 1 nvidia-smi'
 

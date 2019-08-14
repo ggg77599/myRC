@@ -33,6 +33,7 @@ sudo apt-get install python3-distutils -y
 sudo apt-get install ssh -y
 sudo apt-get install git -y
 sudo apt-get install tmux -y
+sudo apt-get install colordiff -y
 sudo apt-get install nfs-common -y
 
 # vimrc essential
