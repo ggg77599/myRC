@@ -131,6 +131,9 @@ set t_Co=256
 " set python file indent = 2
 "autocmd FileType python setlocal ts=2 sw=2 sts=2
 
+" set html filr indent = 2
+autocmd BufRead *.html setlocal ts=2 sw=2 sts=2
+
 " auto open tagbar
 "autocmd VimEnter * nested :call tagbar#autoopen(1)
 
