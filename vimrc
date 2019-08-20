@@ -202,6 +202,9 @@ set viminfo='100,<1000,s100,h
 " open new split plane on right
 set splitright
 
+" set file format = unix
+set fileformat=unix
+
 "-------------------------------------------------------- Key mapping
 " disable arrow key to make myself to use hjkl
 inoremap  <Up>     <NOP>
