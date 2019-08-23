@@ -1,3 +1,10 @@
+# Rearrange this project to dotfiles
+* vim note converge with evernote
+* write the two version of install script, one is shell script and the other is makefile
+* need a minimal version of my environment
+* arrange all vim file type audo open
+* arrange all vim key mapping
+
 # My RC file
 
 Include bashrc, vimrc, sqliterc, tmux.comf
@@ -12,24 +19,24 @@ Include bashrc, vimrc, sqliterc, tmux.comf
 
 
 ## VIM Note
-* **turn off highlighting**  
+* **turn off highlighting**
 `:noh`
-* **replace**  
-`range``s``/``string(source)``/``string(destination)``/``control`  
+* **replace**
+`range``s``/``string(source)``/``string(destination)``/``control`
 `%s/ABC/abc/c`
-* **Install Plugin**  
-`vim +PluginInstall +qall`  
-or  
+* **Install Plugin**
+`vim +PluginInstall +qall`
+or
 `:PluginInstall`
-* **Update Plugin**  
-`vim +PluginUpdate +qall`  
-or  
+* **Update Plugin**
+`vim +PluginUpdate +qall`
+or
 `:PluginUpdate`
-* **Compile YouCompleteMe**  
-`sudo apt-get install build-essential cmake`  
+* **Compile YouCompleteMe**
+`sudo apt-get install build-essential cmake`
 `sudo apt-get install python-dev`
 `git submodule update --init --recursive`
-`cd ~/.vim/bundle/YouCompleteMe`  
+`cd ~/.vim/bundle/YouCompleteMe`
 `./install.py --clang-completer`
 
 * Setting snippet

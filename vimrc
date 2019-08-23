@@ -22,7 +22,7 @@ Plugin 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
 
-" indent line 
+" indent line
 Plugin 'Yggdroot/indentLine'
 
 " tagbar
@@ -46,7 +46,7 @@ filetype plugin indent on    " required
 
 "-------------------------------------------------------- Vundle setting
 
-" YouCompleteMe, C-family Semantic Completion Engine 
+" YouCompleteMe, C-family Semantic Completion Engine
 "let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 "let g:ycm_confirm_extra_conf = 0
 
@@ -74,6 +74,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 " set tagbar sort by code's order
 let g:tagbar_sort = 0
+"let g:tagbar_autoclose = 1
 
 "-------------------------------------------------------- Other setting
 
@@ -110,11 +111,11 @@ set number
 " set each tab to 4 column
 set tabstop=4
 
-" Set shiftwidth to control how many columns text is indented 
+" Set shiftwidth to control how many columns text is indented
 " indent size
 set shiftwidth=4
 
-" when insert new tab, it will replace to space 
+" when insert new tab, it will replace to space
 " When expandtab is set, hitting Tab in insert mode will produce the appropriate number of spaces.
 set expandtab
 
@@ -126,13 +127,17 @@ augroup filetypedetect
 augroup END
 
 " set enable 256 color
-set t_Co=256 
+set t_Co=256
 
 " set python file indent = 2
 "autocmd FileType python setlocal ts=2 sw=2 sts=2
 
 " set html filr indent = 2
 autocmd BufRead *.html setlocal ts=2 sw=2 sts=2
+
+" disable indentLine while open json files
+autocmd Filetype json let g:indentLine_enabled = 0
+autocmd BufRead *.md let g:indentLine_enabled = 0
 
 " auto open tagbar
 "autocmd VimEnter * nested :call tagbar#autoopen(1)
@@ -173,10 +178,10 @@ set hlsearch
 set showmode
 
 " Automatically save before commands like :next and :make
-set autowrite		
+set autowrite
 
 " Show (partial) command in status line.
-set showcmd		
+set showcmd
 
 "set cmdheight=2
 
@@ -199,7 +204,7 @@ highlight Visual ctermbg=DarkGrey
 " copy max line
 set viminfo='100,<1000,s100,h
 
-" open new split plane on right
+" always open new split plane on right
 set splitright
 
 " set file format = unix
@@ -219,16 +224,22 @@ noremap   <Right>  <NOP>
 " set visual search
 vnoremap // y/<C-R>"<CR>
 
-" to save read only file 
+" to save read only file
 cnoremap sudow w !sudo tee % > /dev/null
 
 " turn off highlighting
 nnoremap <F3> :noh<CR>
 
-" enable tagbar
-nmap <F8> :TagbarToggle<CR>
+" remove all white space in the end of line
+nnoremap <F4> :%s/\s\+$//e<CR>
 
-nmap <F7> :IndentLinesToggle<CR>
+" run the current python file
+nnoremap <F5> :!clear & python ./%<CR>
+"
+" enable tagbar
+nnoremap <F8> :TagbarToggle<CR>
+
+nnoremap <F7> :IndentLinesToggle<CR>
 
 " enable nerdtree
 map <C-n> :NERDTreeToggle<CR>
