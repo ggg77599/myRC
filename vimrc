@@ -210,6 +210,9 @@ set splitright
 " set file format = unix
 set fileformat=unix
 
+" show line return as '$'
+"set list
+
 "-------------------------------------------------------- Key mapping
 " disable arrow key to make myself to use hjkl
 inoremap  <Up>     <NOP>
@@ -235,7 +238,7 @@ nnoremap <F4> :%s/\s\+$//e<CR>
 
 " run the current python file
 nnoremap <F5> :!clear & python ./%<CR>
-"
+
 " enable tagbar
 nnoremap <F8> :TagbarToggle<CR>
 

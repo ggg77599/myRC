@@ -4,6 +4,10 @@
 * need a minimal version of my environment
 * arrange all vim file type audo open
 * arrange all vim key mapping
+* arrange all color setting
+* different type of installation
+    * general(advence + vim(all))
+    * docker(basic + vim(simple))
 
 # My RC file
 

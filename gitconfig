@@ -6,6 +6,7 @@
     tls = ls-tree -r master --name-only
     s = status
     r = remote -v
+    co = checkout
 [http]
     sslVerify = false
 [filter "lfs"]
